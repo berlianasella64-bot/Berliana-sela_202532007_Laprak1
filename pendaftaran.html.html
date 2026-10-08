@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Laporan Praktikum - Pendaftaran</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f4f7fb;
+        color: #333;
+    }
+
+    nav {
+        background-color: #1f4e79;
+        text-align: center;
+        padding: 16px;
+    }
+
+    nav a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        margin: 0 10px;
+    }
+
+    nav a:hover {
+        text-decoration: underline;
+    }
+
+    hr {
+        margin: 0;
+        border: 0;
+        border-top: 1px solid #ddd;
+    }
+
+    main {
+        width: 85%;
+        max-width: 700px;
+        margin: 40px auto;
+    }
+
+    main h2 {
+        text-align: center;
+        color: #1f4e79;
+        margin-bottom: 25px;
+    }
+
+    form {
+        background-color: white;
+        padding: 30px;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    td {
+        padding: 10px 8px;
+        vertical-align: middle;
+    }
+
+    td:first-child {
+        width: 35%;
+        font-weight: bold;
+        color: #444;
+    }
+
+    input[type="text"],
+    input[type="password"],
+    input[type="number"],
+    input[type="date"],
+    select,
+    textarea {
+        width: 100%;
+        padding: 9px;
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+        outline: none;
+        border-color: #1f4e79;
+    }
+
+    input[type="radio"],
+    input[type="checkbox"] {
+        margin-right: 5px;
+    }
+
+    textarea {
+        resize: vertical;
+    }
+
+    .pilihan {
+        line-height: 2;
+        font-weight: normal;
+    }
+
+    .tombol {
+        padding-top: 20px;
+    }
+
+    input[type="submit"],
+    input[type="reset"] {
+        padding: 9px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: bold;
+        margin-right: 5px;
+    }
+
+    input[type="submit"] {
+        background-color: #1f4e79;
+        color: white;
+    }
+
+    input[type="reset"] {
+        background-color: #ddd;
+        color: #333;
+    }
+
+    input[type="submit"]:hover {
+        background-color: #173a5b;
+    }
+
+    input[type="reset"]:hover {
+        background-color: #c7c7c7;
+    }
+
+    @media (max-width: 600px) {
+        main {
+            width: 90%;
+            margin: 25px auto;
+        }
+
+        form {
+            padding: 20px 15px;
+        }
+
+        td {
+            display: block;
+            width: auto !important;
+        }
+
+        td:first-child {
+            padding-bottom: 3px;
+        }
+    }
+</style>
+</head>
+<body>
+<nav>
+    <a href="index.html">Beranda</a> |
+    <a href="pendaftaran.html">Pendaftaran</a>
+</nav>
+
+<hr>
+
+<main>
+    <h2>Form Pendaftaran Praktikan</h2>
+
+    <form action="" method="post">
+        <table>
+            <tr>
+                <td>Nama Lengkap : </td>
+                <td>
+                    <input type="text" name="nama">
+                </td>
+            </tr>
+
+            <tr>
+                <td>Password : </td>
+                <td>
+                    <input type="password" name="pass">
+                </td>
+            </tr>
+
+            <tr>
+                <td>NIM</td>
+                <td>
+                    <input type="number" name="nim">
+                </td>
+            </tr>
+
+            <tr>
+                <td>Tanggal Lahir : </td>
+                <td>
+                    <input type="date" name="tgl">
+                </td>
+            </tr>
+
+            <tr>
+                <td>Jenis Kelamin : </td>
+                <td class="pilihan">
+                    <input type="radio" name="jk" value="L"> Laki-Laki
+                    <input type="radio" name="jk" value="P"> Perempuan
+                </td>
+            </tr>
+
+            <tr>
+                <td>Minat bidang : </td>
+                <td class="pilihan">
+                    <input type="checkbox" name="minat" value="web">Web
+                    <input type="checkbox" name="minat" value="network">Jaringan
+                    <input type="checkbox" name="minat" value="design">Design/Modeling
+                </td>
+            </tr>
+
+            <tr>
+                <td>Program Studi</td>
+                <td>
+                    <select name="prodi">
+                        <option value="IF">S1 Teknik Informatika</option>
+                        <option value="SI">S1 Sistem Informasi</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Alasan Mendaftar</td>
+                <td>
+                    <textarea name="alasan" rows="3" cols="20"></textarea>
+                </td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td class="tombol">
+                    <input type="submit" value="Kirim">
+                    <input type="reset" value="Reset">
+                </td>
+            </tr>
+        </table>
+    </form>
+</main>
+</body>
+</html>
